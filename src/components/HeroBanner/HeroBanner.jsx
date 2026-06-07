@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Parallax } from "react-scroll-parallax"
 import "./HeroBanner.css"
 
 const slides = [
@@ -34,7 +35,7 @@ export default function HeroBanner() {
 
    return (
       <section className="hero__container" aria-label="Hero carousel">
-         <div className="hero__media" aria-hidden="true">
+         <Parallax speed={-18} className="hero__media" aria-hidden="true">
             {slides.map((slide, index) => (
                <div
                   key={`${slide.eyebrow}-${index}`}
@@ -45,21 +46,22 @@ export default function HeroBanner() {
                   }}
                />
             ))}
-         </div>
+         </Parallax>
 
          <div className="hero__overlay"></div>
          <div key={activeIndex} className="hero__overlay--animation"></div>
          <div className="hero__grid"></div>
 
          <div className="hero__content">
+            <Parallax speed={10} className="hero__content-parallax">
+               <h1 className="hero__title">
+                  MOHAMMAD<br />
+                  YUDHA<br />
+                  PAMUNGKAS
+               </h1>
 
-            <h1 className="hero__title">
-               MOHAMMAD<br />
-               YUDHA<br />
-               PAMUNGKAS
-            </h1>
-
-            <p className="hero__eyebrow">{slides[activeIndex].eyebrow}</p>
+               <p className="hero__eyebrow">{slides[activeIndex].eyebrow}</p>
+            </Parallax>
          </div>
 
          <div className="hero__progress" aria-hidden="true">

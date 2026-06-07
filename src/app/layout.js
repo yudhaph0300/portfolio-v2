@@ -1,4 +1,5 @@
 import { Space_Grotesk } from "next/font/google";
+import ParallaxProvider from "@/components/ParallaxProvider/ParallaxProvider";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={spaceGrotesk.variable}>
-      <body>{children}</body>
+      <body>
+        <ParallaxProvider>{children}</ParallaxProvider>
+      </body>
     </html>
   );
 }
