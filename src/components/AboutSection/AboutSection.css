@@ -1,6 +1,6 @@
 .about__container {
    position: relative;
-   padding: 88px 28px 104px;
+   padding: 88px var(--page-gutter) 104px;
    background: #090909;
    color: #f5f5f5;
    overflow: hidden;
@@ -9,11 +9,15 @@
 .about__grid {
    position: absolute;
    inset: 0;
-   background:
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-      repeating-linear-gradient(to right, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 42px);
-   opacity: 0.65;
-   pointer-events: none;
+
+   background-image: repeating-linear-gradient(to right,
+         rgba(184, 180, 180, 0.05) 0px,
+         rgba(184, 180, 180, 0.05) 1px,
+         transparent 1px,
+         transparent var(--grid-track));
+   background-size: var(--grid-track) 100%;
+   background-position: var(--page-gutter) 0;
+   background-repeat: repeat-x;
 }
 
 .about__eyebrow-row,
@@ -149,7 +153,7 @@
 
 @media (max-width: 720px) {
    .about__container {
-      padding: 72px 18px 86px;
+      padding: 72px var(--page-gutter) 86px;
    }
 
    .about__eyebrow-row {
