@@ -1,0 +1,212 @@
+.hero__container {
+   position: sticky;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   min-height: 100vh;
+   z-index: 0;
+}
+
+.hero__media {
+   position: absolute;
+   inset: 0;
+}
+
+.hero__bg {
+   position: absolute;
+   inset: 0;
+   background-size: cover;
+   background-position: center;
+   opacity: 0;
+   transform: scale(1.08);
+   transition: opacity 0.95s ease, transform 6.5s ease;
+}
+
+.hero__bg.is-active {
+   opacity: 1;
+   transform: scale(1);
+}
+
+.hero__overlay {
+   position: absolute;
+   inset: 0;
+
+   background:
+      linear-gradient(to bottom,
+         rgba(0, 0, 0, 0.2),
+         rgba(0, 0, 0, 0.9));
+
+   z-index: 1;
+}
+
+.hero__overlay--animation {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: -34%;
+   width: 34%;
+   z-index: 3;
+   pointer-events: none;
+   background: linear-gradient(100deg,
+         rgba(255, 255, 255, 0) 0%,
+         rgba(255, 255, 255, 0.08) 30%,
+         rgba(255, 255, 255, 0.3) 50%,
+         rgba(255, 255, 255, 0.08) 70%,
+         rgba(255, 255, 255, 0) 100%);
+   -webkit-mask-image: linear-gradient(to right,
+         transparent 0%,
+         black 12%,
+         black 88%,
+         transparent 100%);
+   mask-image: linear-gradient(to right,
+         transparent 0%,
+         black 12%,
+         black 88%,
+         transparent 100%);
+   mix-blend-mode: soft-light;
+   opacity: 0.85;
+   filter: blur(0.5px);
+   will-change: transform;
+   animation: hero-overlay-sweep 5.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hero__grid {
+   position: absolute;
+   inset: 0;
+
+   background:
+      linear-gradient(to bottom,
+         transparent calc(20% - 0.5px),
+         rgba(184, 180, 180, 0.22) calc(20% - 0.5px),
+         rgba(184, 180, 180, 0.22) calc(20% + 0.5px),
+         transparent calc(20% + 0.5px)),
+      linear-gradient(to bottom,
+         transparent calc(65% - 0.5px),
+         rgba(184, 180, 180, 0.22) calc(65% - 0.5px),
+         rgba(184, 180, 180, 0.22) calc(65% + 0.5px),
+         transparent calc(65% + 0.5px)),
+      repeating-linear-gradient(to right,
+         rgba(184, 180, 180, 0.15) 0px,
+         rgba(184, 180, 180, 0.15) 1px,
+         transparent 1px,
+         transparent 40px);
+
+   z-index: 4;
+}
+
+.hero__content {
+   position: relative;
+   z-index: 2;
+
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   color: white;
+}
+
+.hero__eyebrow {
+   margin-top: 16px;
+   font-size: 12px;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.86);
+}
+
+
+
+.hero__title {
+   margin-top: 80px;
+   margin-bottom: 20px;
+   font-size: 10vw;
+   line-height: 0.75;
+   font-weight: 900;
+   text-align: center;
+   letter-spacing: -4px;
+}
+
+.hero__progress {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 2px;
+   z-index: 5;
+   background: rgba(255, 255, 255, 0.2);
+}
+
+.hero__progress-bar {
+   display: block;
+   height: 100%;
+   width: 100%;
+   background: rgba(255, 255, 255, 0.3);
+   transform-origin: left center;
+   animation: hero-progress 5.5s linear;
+}
+
+@keyframes hero-progress {
+   from {
+      transform: scaleX(0);
+   }
+
+   to {
+      transform: scaleX(1);
+   }
+}
+
+@keyframes hero-overlay-sweep {
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(430%);
+   }
+}
+
+@media (max-width: 900px) {
+   .hero__label {
+      font-size: 12px;
+   }
+
+   .hero__label--left,
+   .hero__label--center,
+   .hero__label--right {
+      top: 120px;
+   }
+
+   .hero__label--left {
+      left: 28px;
+   }
+
+   .hero__label--right {
+      right: 28px;
+   }
+
+   .hero__title {
+      font-size: 16vw;
+      margin-top: 80px;
+      letter-spacing: -2px;
+   }
+}
+
+@media (max-width: 640px) {
+   .hero__label {
+      display: none;
+   }
+
+   .hero__title {
+      margin-top: 0;
+      font-size: 17vw;
+      line-height: 0.8;
+   }
+
+   .hero__eyebrow {
+      margin-top: 24px;
+      letter-spacing: 0.16em;
+   }
+}
