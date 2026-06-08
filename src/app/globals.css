@@ -4,7 +4,7 @@ html {
 
 :root {
   --page-gutter: clamp(18px, 3vw, 28px);
-  --grid-columns: 24;
+  --grid-columns: 40;
   --grid-track: calc((100vw - (var(--page-gutter) * 2)) / var(--grid-columns));
 }
 
