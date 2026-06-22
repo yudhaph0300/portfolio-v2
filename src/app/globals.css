@@ -3,9 +3,59 @@ html {
 }
 
 :root {
+  /* Spacing Scale (8px base) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  --space-5xl: 96px;
+
+  /* Typography Scale */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 32px;
+  --text-5xl: 40px;
+  --text-6xl: 48px;
+  --text-7xl: 56px;
+
+  /* Typography Display (Responsive) */
+  --display-sm: clamp(28px, 2.5vw, 36px);
+  --display-md: clamp(36px, 3.5vw, 48px);
+  --display-lg: clamp(48px, 5vw, 64px);
+  --display-xl: clamp(64px, 6vw, 80px);
+
+  /* Line Heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.6;
+  --lh-loose: 1.8;
+
+  /* Letter Spacing */
+  --ls-tight: -0.03em;
+  --ls-normal: 0em;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.08em;
+  --ls-widest: 0.2em;
+
+  /* Layout */
   --page-gutter: clamp(18px, 3vw, 28px);
   --grid-columns: 40;
   --grid-track: calc((100vw - (var(--page-gutter) * 2)) / var(--grid-columns));
+
+  /* Transitions */
+  --transition-fast: 220ms ease;
+  --transition-base: 320ms ease;
+  --transition-slow: 500ms ease;
 }
 
 html,

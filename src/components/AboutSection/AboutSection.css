@@ -1,6 +1,6 @@
 .about__container {
    position: relative;
-   padding: 88px var(--page-gutter) 104px;
+   padding: var(--space-5xl) var(--page-gutter);
    background: #090909;
    color: #f5f5f5;
    overflow: hidden;
@@ -50,6 +50,8 @@
    background-size: var(--grid-track) 100%;
    background-position: var(--page-gutter) 0;
    background-repeat: repeat-x;
+   opacity: 0;
+   animation: grid-fade-in 800ms ease-out 400ms forwards;
 }
 
 .about__eyebrow-row,
@@ -63,30 +65,30 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   gap: 24px;
-   margin-bottom: 26px;
+   gap: var(--space-lg);
+   margin-bottom: var(--space-lg);
    text-transform: uppercase;
 }
 
 .about__eyebrow {
-   font-size: 12px;
+   font-size: var(--text-xs);
    font-weight: 700;
-   letter-spacing: 0.08em;
+   letter-spacing: var(--ls-wider);
    color: rgba(245, 245, 245, 0.92);
 }
 
 .about__intro {
    position: relative;
    z-index: 3;
-   padding-bottom: 44px;
+   padding-bottom: var(--space-2xl);
    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .about__title {
-   font-size: clamp(2rem, 3.5vw, 4rem);
-   line-height: 1.1;
+   font-size: var(--display-md);
+   line-height: var(--lh-tight);
    font-weight: 700;
-   letter-spacing: -0.03em;
+   letter-spacing: var(--ls-tight);
    text-wrap: balance;
 }
 
@@ -94,36 +96,36 @@
 .about__intro p,
 .about__card p,
 .about__side-copy p {
-   font-size: 15px;
-   line-height: 1.5;
+   font-size: var(--text-base);
+   line-height: var(--lh-normal);
    color: rgba(245, 245, 245, 0.76);
 }
 
 .about__content {
    display: grid;
    grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.95fr);
-   gap: 42px;
-   padding-top: 32px;
+   gap: var(--space-2xl);
+   padding-top: var(--space-xl);
 }
 
 .about__services {
    display: grid;
    grid-template-columns: repeat(4, minmax(0, 1fr));
-   gap: 22px;
+   gap: var(--space-md);
 }
 
 .about__card {
    min-height: 242px;
-   padding: 18px 16px;
+   padding: var(--space-lg);
    background: rgba(255, 255, 255, 0.06);
    border: 1px solid rgba(255, 255, 255, 0.08);
    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   gap: 24px;
+   gap: var(--space-lg);
    backdrop-filter: blur(2px);
-   transition: border-color 220ms ease, background-color 220ms ease, transform 220ms ease;
+   transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .about__card:hover,
@@ -135,16 +137,16 @@
 }
 
 .about__card h3 {
-   font-size: 1.05rem;
-   line-height: 0.95;
-   letter-spacing: -0.04em;
+   font-size: var(--text-lg);
+   line-height: var(--lh-snug);
+   letter-spacing: var(--ls-tight);
    max-width: 7ch;
 }
 
 .about__card-copy {
    opacity: 0;
-   transform: translateY(8px);
-   transition: opacity 220ms ease, transform 220ms ease;
+   transform: translateY(var(--space-sm));
+   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .about__card:hover .about__card-copy,
@@ -157,21 +159,21 @@
 .about__side {
    display: grid;
    align-content: start;
-   gap: 18px;
-   padding-top: 2px;
+   gap: var(--space-lg);
+   padding-top: var(--space-sm);
 }
 
 .about__side-kicker {
-   font-size: 12px;
+   font-size: var(--text-xs);
    font-weight: 700;
-   letter-spacing: 0.08em;
+   letter-spacing: var(--ls-wider);
    text-transform: uppercase;
    color: rgba(245, 245, 245, 0.92);
 }
 
 .about__side-copy {
    display: grid;
-   gap: 18px;
+   gap: var(--space-lg);
 }
 
 @media (max-width: 1080px) {
@@ -195,18 +197,28 @@
    }
 }
 
+@keyframes grid-fade-in {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
 @media (max-width: 720px) {
    .about__container {
-      padding: 72px var(--page-gutter) 86px;
+      padding: var(--space-4xl) var(--page-gutter);
    }
 
    .about__eyebrow-row {
-      margin-bottom: 20px;
+      margin-bottom: var(--space-md);
    }
 
    .about__hero {
-      gap: 24px;
-      padding-bottom: 28px;
+      gap: var(--space-lg);
+      padding-bottom: var(--space-lg);
    }
 
    .about__title {
@@ -214,12 +226,12 @@
    }
 
    .about__intro {
-      gap: 14px;
+      gap: var(--space-md);
    }
 
    .about__services {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: var(--space-md);
    }
 
    .about__card {
@@ -227,7 +239,7 @@
    }
 
    .about__content {
-      padding-top: 24px;
-      gap: 28px;
+      padding-top: var(--space-lg);
+      gap: var(--space-lg);
    }
 }

@@ -5,8 +5,8 @@
    right: 0;
    z-index: 20;
 
-   height: 88px;
-   padding: 0 44px;
+   height: var(--space-5xl);
+   padding: 0 var(--space-2xl);
 
    display: flex;
    align-items: center;
@@ -29,15 +29,15 @@
 .navbar__menu {
    display: flex;
    align-items: center;
-   gap: 24px;
+   gap: var(--space-lg);
 }
 
 .navbar__link {
    color: rgba(255, 255, 255, 0.92);
-   font-size: 13px;
-   letter-spacing: 0.12em;
+   font-size: var(--text-xs);
+   letter-spacing: var(--ls-wider);
    text-transform: uppercase;
-   transition: opacity 0.2s ease;
+   transition: opacity 200ms ease;
    text-decoration: none;
 }
 
@@ -49,17 +49,17 @@
 
 @media (max-width: 900px) {
    .navbar__container {
-      height: 74px;
-      padding: 0 20px;
+      height: var(--space-4xl);
+      padding: 0 var(--space-md);
    }
 
    .navbar__menu {
-      gap: 14px;
+      gap: var(--space-md);
    }
 
    .navbar__link {
       font-size: 11px;
-      letter-spacing: 0.1em;
+      letter-spacing: var(--ls-wider);
    }
 }
 
