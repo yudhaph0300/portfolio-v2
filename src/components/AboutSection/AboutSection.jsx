@@ -43,27 +43,14 @@ export default function AboutSection() {
       >
          <div className="about__grid" aria-hidden="true" />
 
-         <div className="about__eyebrow-row">
-            <p className="about__eyebrow">About Me</p>
-            <p className="about__eyebrow about__eyebrow--right">Frontend Web Developer</p>
-         </div>
 
-         <div className="about__hero">
+
+         <div className="about__intro">
             <h2 className="about__title" id="about-title">
-               I am Mohammad Yudha Pamungkas, a Front-end Web Developer with over 2 years of experience.
+               I am Mohammad Yudha Pamungkas, a Front-end Web Developer with over 2 years of experience and a Computer Science degree from Universitas Brawijaya. I specialize in building dynamic, functional, and visually appealing web interfaces using VueJS, ReactJS, and Laravel.
             </h2>
 
-            <div className="about__intro">
-               <p>
-                  I hold a Computer Science degree from Universitas Brawijaya and specialize in building dynamic,
-                  functional, and visually appealing web interfaces.
-               </p>
 
-               <p>
-                  My core stack includes VueJS, ReactJS, and Laravel to craft scalable products with clean and
-                  maintainable frontend architecture.
-               </p>
-            </div>
          </div>
 
          <div className="about__content">
