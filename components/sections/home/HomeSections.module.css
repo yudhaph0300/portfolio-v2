@@ -1,0 +1,214 @@
+.heroSection {
+   position: relative;
+   height: 330vh;
+   width: 100%;
+   overflow: clip;
+   background: #050505;
+}
+
+.heroViewport {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+}
+
+.canvasStage {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.canvas {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   transform-origin: center;
+   will-change: transform;
+}
+
+.overlay {
+   position: absolute;
+   inset: 0;
+   background:
+      radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.16), transparent 45%),
+      linear-gradient(180deg, rgba(6, 7, 10, 0.2) 0%, rgba(6, 7, 10, 0.85) 86%);
+   z-index: 1;
+   will-change: transform;
+}
+
+.heroContent {
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 1.5rem;
+   color: white;
+   will-change: opacity;
+}
+
+.heroTextBlock {
+   width: min(980px, 100%);
+   min-height: clamp(8rem, 22vw, 18rem);
+   position: relative;
+   transform-origin: center;
+   will-change: transform;
+   cursor: default;
+   perspective: 1200px;
+   transform-style: preserve-3d;
+}
+
+.textSection {
+   position: absolute;
+   inset: 0;
+   display: grid;
+   gap: 0.9rem;
+   justify-items: center;
+   align-content: center;
+   text-align: center;
+   will-change: transform, opacity;
+}
+
+
+
+.primaryHeadline {
+   margin: 0;
+   font-size: clamp(2.8rem, 7vw, 6.2rem);
+   line-height: 0.92;
+   letter-spacing: -0.04em;
+   font-weight: 700;
+   text-transform: uppercase;
+   max-width: 960px;
+   color: white;
+   text-wrap: balance;
+}
+
+.primaryHeadlineInner,
+.secondaryHeadlineInner {
+   display: inline-block;
+}
+
+.secondaryHeadline {
+   margin: 0;
+   font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+   line-height: 1.2;
+   letter-spacing: 0.28em;
+   text-transform: uppercase;
+   font-weight: 400;
+   color: rgba(255, 255, 255, 0.86);
+}
+
+
+.aboutSection {
+   position: relative;
+   z-index: 5;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: -100vh;
+   padding: 6rem 2rem;
+   background: #ffffff;
+   will-change: transform, opacity;
+}
+
+.aboutContent {
+   width: min(940px, 100%);
+   display: grid;
+   gap: 0.8rem;
+   will-change: transform, opacity;
+}
+
+.aboutEyebrow {
+   font-size: 0.82rem;
+   letter-spacing: 0.24em;
+   text-transform: uppercase;
+   color: #5f6a83;
+}
+
+.aboutContent h2 {
+   font-size: clamp(2rem, 3.5vw, 3.5rem);
+   line-height: 1.05;
+   color: #111827;
+   max-width: 880px;
+}
+
+.aboutContent p {
+   font-size: 1.06rem;
+   line-height: 1.85;
+   color: #4b5569;
+   max-width: 760px;
+}
+
+.comingSoonSection {
+   min-height: 72vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5rem 2rem;
+   background: #ffffff;
+}
+
+.comingSoonContent {
+   width: min(940px, 100%);
+   display: grid;
+   gap: 0.8rem;
+}
+
+.comingSoonEyebrow {
+   font-size: 0.82rem;
+   letter-spacing: 0.24em;
+   text-transform: uppercase;
+   color: #51607d;
+}
+
+.comingSoonContent h3 {
+   font-size: clamp(1.8rem, 3vw, 3rem);
+   line-height: 1.08;
+   color: #111827;
+}
+
+.comingSoonContent p {
+   font-size: 1.02rem;
+   line-height: 1.8;
+   color: #4b5569;
+   max-width: 680px;
+}
+
+@media (max-width: 700px) {
+   .heroSection {
+      height: 310vh;
+   }
+
+   .heroContent {
+      padding: 0 1rem;
+   }
+
+   .primaryHeadline {
+      font-size: clamp(2.2rem, 10vw, 3.3rem);
+   }
+
+   .secondaryHeadline {
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
+   }
+
+   .aboutSection {
+      min-height: auto;
+      padding: 4.4rem 1.25rem;
+   }
+
+   .comingSoonSection {
+      min-height: auto;
+      padding: 4rem 1.25rem;
+   }
+}
