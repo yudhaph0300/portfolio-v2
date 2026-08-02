@@ -6,6 +6,59 @@
    background: #050505;
 }
 
+.fullscreenLoader {
+   position: fixed;
+   inset: 0;
+   z-index: 9999;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background:
+      radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.1), transparent 40%),
+      linear-gradient(180deg, #040406 0%, #090c14 100%);
+   color: #f9fafb;
+   transform: translateY(0);
+}
+
+.fullscreenLoaderExit {
+   animation: loaderSwipeUp 1s cubic-bezier(0.3, 0.87, 0.25, 1) forwards;
+}
+
+.loaderInner {
+   display: grid;
+   justify-items: center;
+   gap: 0.55rem;
+   padding: 1.6rem 2rem;
+}
+
+.loaderLabel {
+   margin: 0;
+   margin-bottom: 40px;
+   font-size: clamp(0.82rem, 1.35vw, 0.94rem);
+   text-transform: uppercase;
+   letter-spacing: 0.26em;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.loaderProgress {
+   margin: 0;
+   font-size: clamp(2.1rem, 7vw, 4.2rem);
+   font-weight: 700;
+   letter-spacing: -0.03em;
+   line-height: 0.9;
+   color: #ffffff;
+}
+
+@keyframes loaderSwipeUp {
+   0% {
+      transform: translateY(0);
+   }
+
+   100% {
+      transform: translateY(-100%);
+   }
+}
+
 .heroViewport {
    position: relative;
    height: 100vh;
