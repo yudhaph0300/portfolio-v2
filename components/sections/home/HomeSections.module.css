@@ -1,6 +1,6 @@
 .heroSection {
    position: relative;
-   height: 330vh;
+   height: 560vh;
    width: 100%;
    overflow: clip;
    background: #050505;
@@ -94,7 +94,6 @@
       radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.16), transparent 45%),
       linear-gradient(180deg, rgba(6, 7, 10, 0.2) 0%, rgba(6, 7, 10, 0.85) 86%);
    z-index: 1;
-   will-change: transform;
 }
 
 .heroContent {
@@ -239,7 +238,7 @@
 
 @media (max-width: 700px) {
    .heroSection {
-      height: 310vh;
+      height: 560vh;
    }
 
    .heroContent {
