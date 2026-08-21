@@ -1,3 +1,5 @@
+import Lanyard from "../../reusable/Lanyard/Lanyard";
+
 export default function AboutSection({
    aboutSectionTransform,
    aboutReveal,
@@ -11,13 +13,18 @@ export default function AboutSection({
          className={styles.aboutSection}
          style={{ transform: aboutSectionTransform, opacity: Math.max(aboutReveal, 0.001) }}
       >
-         <div className={styles.aboutContent} style={{ opacity: aboutContentOpacity, transform: aboutContentTransform }}>
-            <p className={styles.aboutEyebrow}>About</p>
-            <h2>I am a web developer focused on interactive and expressive interfaces.</h2>
-            <p>
-               I build digital products with attention to motion, pacing, and clarity. My goal is to
-               make each experience feel intentional while staying fast and accessible.
-            </p>
+         <div className={styles.aboutGrid}>
+            <div className={styles.aboutLanyard} aria-hidden="true">
+               <Lanyard />
+            </div>
+
+            <div className={styles.aboutContent} style={{ opacity: aboutContentOpacity, transform: aboutContentTransform }}>
+               <p className={styles.aboutEyebrow}>About</p>
+               <h2>I Build Ideas Into Digital Experiences.</h2>
+               <p>
+                  I’m a Front-end Web Developer focused on building modern, responsive, and functional web experiences with React and Next.js. I enjoy turning ideas and designs into clean, intuitive interfaces while continuously improving my skills and exploring better ways to build for the web.
+               </p>
+            </div>
          </div>
       </section>
    );

@@ -168,34 +168,56 @@
    align-items: center;
    justify-content: center;
    margin-top: -100vh;
-   padding: 6rem 2rem;
+   padding: 0 2rem;
    background: #ffffff;
+   overflow: hidden;
    will-change: transform, opacity;
 }
 
+.aboutGrid {
+   position: relative;
+   width: min(1180px, 100%);
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+   align-items: center;
+   gap: clamp(2rem, 7vw, 7rem);
+}
+
+.aboutLanyard {
+   position: absolute;
+   z-index: 2;
+   inset: 0;
+   width: 100vw;
+   transform: translateX(calc((min(1180px, 100vw) - 100vw) / 2));
+}
+
 .aboutContent {
-   width: min(940px, 100%);
+   position: relative;
+   z-index: 1;
+   grid-column: 2;
+   width: 100%;
    display: grid;
    gap: 0.8rem;
    will-change: transform, opacity;
 }
 
 .aboutEyebrow {
-   font-size: 0.82rem;
+   font-size: 0.9rem;
    letter-spacing: 0.24em;
    text-transform: uppercase;
    color: #5f6a83;
 }
 
 .aboutContent h2 {
-   font-size: clamp(2rem, 3.5vw, 3.5rem);
+   font-size: clamp(2.6rem, 4.8vw, 5rem);
    line-height: 1.05;
    color: #111827;
    max-width: 880px;
 }
 
 .aboutContent p {
-   font-size: 1.06rem;
+   font-size: 1rem;
    line-height: 1.85;
    color: #4b5569;
    max-width: 760px;
@@ -256,7 +278,31 @@
 
    .aboutSection {
       min-height: 100vh;
-      padding: 4.4rem 1.25rem;
+      padding: 0 1.25rem;
+   }
+
+   .aboutGrid {
+      min-height: 0;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+   }
+
+   .aboutLanyard {
+      order: 1;
+      transform: none;
+   }
+
+   .aboutContent {
+      order: 2;
+      grid-column: 1;
+   }
+
+   .aboutContent h2 {
+      font-size: clamp(2.4rem, 9.5vw, 3.8rem);
+   }
+
+   .aboutContent p {
+      font-size: 1rem;
    }
 
    .comingSoonSection {
