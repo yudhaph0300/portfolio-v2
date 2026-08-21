@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import HeroSection from "./HeroSection";
-import AboutSection from "./AboutSection";
-import ComingSoonSection from "./ComingSoonSection";
-import styles from "./HomeSections.module.css";
-import { useHomeSectionsSequence } from "../../../lib/sections/home/useHomeSectionsSequence";
+import HeroSection from "../../sections/home/HeroSection";
+import AboutSection from "../../sections/home/AboutSection";
+import ComingSoonSection from "../../sections/home/ComingSoonSection";
+import styles from "./HomePage.module.css";
+import { useHomeSectionsSequence } from "../../../lib/hooks/home/useHomeSectionsSequence";
 
-export default function HomeSections() {
+export default function HomePage() {
    const {
       refs: { sectionRef, viewportRef, canvasRef },
       hero: {

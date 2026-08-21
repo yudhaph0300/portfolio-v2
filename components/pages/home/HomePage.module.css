@@ -202,7 +202,7 @@
 }
 
 .comingSoonSection {
-   min-height: 72vh;
+   min-height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -255,12 +255,12 @@
    }
 
    .aboutSection {
-      min-height: auto;
+      min-height: 100vh;
       padding: 4.4rem 1.25rem;
    }
 
    .comingSoonSection {
-      min-height: auto;
+      min-height: 100vh;
       padding: 4rem 1.25rem;
    }
 }

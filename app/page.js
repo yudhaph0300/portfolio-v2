@@ -1,10 +1,10 @@
-import HomeSections from "../components/sections/home/HomeSections";
+import HomePage from "../components/pages/home/HomePage";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.page}>
-      <HomeSections />
+      <HomePage />
     </main>
   );
 }
