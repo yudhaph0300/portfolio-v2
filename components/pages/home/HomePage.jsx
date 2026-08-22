@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import HeroSection from "../../sections/home/HeroSection";
 import AboutSection from "../../sections/home/AboutSection";
 import TechMarqueeSection from "../../sections/home/TechMarqueeSection";
+import ExperienceSection from "../../sections/home/ExperienceSection";
 import ComingSoonSection from "../../sections/home/ComingSoonSection";
 import styles from "./HomePage.module.css";
 import { useHomeSectionsSequence } from "../../../lib/hooks/home/useHomeSectionsSequence";
@@ -129,6 +130,7 @@ export default function HomePage() {
          />
 
          <TechMarqueeSection styles={styles} />
+         <ExperienceSection styles={styles} />
          <ComingSoonSection styles={styles} />
       </>
    );

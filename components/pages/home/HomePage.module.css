@@ -272,6 +272,47 @@
    object-fit: contain;
 }
 
+.experienceSection {
+   position: relative;
+   min-height: 100vh;
+   overflow: hidden;
+   isolation: isolate;
+   background: #111;
+}
+
+.experienceContent {
+   position: relative;
+   z-index: 1;
+   width: min(1180px, 100%);
+   margin: 0 auto;
+   padding: 7rem 2rem;
+}
+
+.experienceHeading {
+   /* max-width: 620px; */
+   margin-bottom: 3rem;
+   color: #ffffff;
+}
+
+.experienceEyebrow {
+   margin-bottom: 0.8rem;
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 0.82rem;
+   letter-spacing: 0.24em;
+   text-transform: uppercase;
+}
+
+.experienceHeading h2 {
+   font-size: clamp(2.4rem, 5vw, 5rem);
+   line-height: 0.98;
+}
+
+.experienceCards {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 1.5rem;
+}
+
 @keyframes marqueeScroll {
    to {
       transform: translateX(-50%);
@@ -383,5 +424,13 @@
    .marqueeSet {
       gap: 2.5rem;
       padding: 0 2.5rem;
+   }
+
+   .experienceContent {
+      padding: 4rem 1.25rem;
+   }
+
+   .experienceCards {
+      grid-template-columns: 1fr;
    }
 }
