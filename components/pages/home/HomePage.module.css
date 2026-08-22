@@ -313,6 +313,218 @@
    gap: 1.5rem;
 }
 
+.featuredProjectsSection {
+   position: relative;
+   overflow: hidden;
+   background: #f3f1ec;
+   color: #151515;
+}
+
+.featuredProjectsContent {
+   width: min(1180px, 100%);
+   margin: 0 auto;
+   padding: 8rem 2rem 9rem;
+}
+
+.featuredProjectsHeading {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+   align-items: end;
+   gap: 2rem;
+   margin-bottom: 3.5rem;
+   padding-bottom: 2.5rem;
+   border-bottom: 1px solid rgba(21, 21, 21, 0.2);
+}
+
+.featuredProjectsHeading h2 {
+   max-width: none;
+   font-size: clamp(2.25rem, 3.8vw, 4rem);
+   line-height: 0.95;
+   letter-spacing: -0.04em;
+   white-space: nowrap;
+}
+
+.featuredProjectsIntro {
+   max-width: 300px;
+   padding-bottom: 0.1rem;
+   color: #62625e;
+   font-size: 0.98rem;
+   line-height: 1.65;
+}
+
+.featuredProjectsGrid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 1rem;
+}
+
+.projectCard {
+   position: relative;
+   min-height: 620px;
+   display: grid;
+   grid-template-columns: 1fr;
+   border: 1px solid rgba(21, 21, 21, 0.12);
+   overflow: hidden;
+}
+
+.projectCardCoral {
+   background: #e76f51;
+}
+
+.projectCardLime {
+   background: #c7d96b;
+}
+
+.projectCardBlue {
+   background: #8fb8d8;
+}
+
+.projectCardImageWrap {
+   position: absolute;
+   inset: 0;
+   z-index: 0;
+   overflow: hidden;
+   background: #202020;
+}
+
+.projectCard:first-child {
+   grid-column: 1 / -1;
+}
+
+.projectCard:first-child .projectCardImageWrap {
+   aspect-ratio: auto;
+}
+
+.projectCardImageWrap::after {
+   position: absolute;
+   inset: 0;
+   content: "";
+   background: linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.26) 70%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 45%, rgba(0, 0, 0, 0.45));
+}
+
+.projectCardImage {
+   object-fit: cover;
+   transition: transform 500ms ease;
+}
+
+.projectCardImageParallax {
+   position: absolute;
+   inset: -20% 0;
+   height: 140%;
+}
+
+.projectCard:hover .projectCardImage {
+   transform: scale(1.06);
+}
+
+.projectCardTopline,
+.projectCardTags {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 0.78rem;
+   font-weight: 700;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+}
+
+.projectCardTopline {
+   color: rgba(255, 255, 255, 0.78);
+}
+
+.projectCardArrow {
+   font-size: 1.7rem;
+   font-weight: 400;
+   line-height: 1;
+}
+
+.projectCardInfo {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 2rem;
+   min-height: 620px;
+   padding: 2rem;
+   color: #ffffff;
+}
+
+.projectCardBody {
+   display: grid;
+   gap: 1rem;
+   max-width: 310px;
+}
+
+.projectCardBody h3 {
+   font-size: clamp(2rem, 3vw, 3.2rem);
+   line-height: 0.95;
+   letter-spacing: -0.04em;
+}
+
+.projectCardBody p {
+   font-size: 0.98rem;
+   line-height: 1.6;
+}
+
+.projectCardTags {
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   gap: 0.45rem;
+}
+
+.projectCardTags span {
+   padding: 0.45rem 0.6rem;
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   font-size: 0.68rem;
+   letter-spacing: 0.08em;
+}
+
+.footerSection {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   padding: 1.5rem 2rem;
+   background: #111111;
+   color: rgba(255, 255, 255, 0.72);
+   font-size: 0.78rem;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+
+.footerCopyright {
+   margin: 0;
+}
+
+.footerContactButtons {
+   display: flex;
+   align-items: center;
+   gap: 0.6rem;
+}
+
+.footerContactButton {
+   width: 2.35rem;
+   height: 2.35rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid rgba(255, 255, 255, 0.42);
+   border-radius: 50%;
+   color: rgba(255, 255, 255, 0.78);
+   font-size: 0.95rem;
+   font-weight: 700;
+   letter-spacing: 0;
+   transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.footerContactButton:hover {
+   border-color: #ffffff;
+   background: #ffffff;
+   color: #111111;
+}
+
 @keyframes marqueeScroll {
    to {
       transform: translateX(-50%);
@@ -433,4 +645,60 @@
    .experienceCards {
       grid-template-columns: 1fr;
    }
+
+   .featuredProjectsContent {
+      padding: 5rem 1.25rem 6rem;
+   }
+
+   .featuredProjectsHeading {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.75rem;
+   }
+
+   .featuredProjectsHeading h2 {
+      font-size: clamp(1.8rem, 7vw, 2.8rem);
+   }
+
+   .featuredProjectsIntro {
+      max-width: 340px;
+   }
+
+   .featuredProjectsGrid {
+      grid-template-columns: 1fr;
+   }
+
+   .projectCard:first-child {
+      grid-column: auto;
+   }
+
+   .projectCard {
+      grid-template-columns: 1fr;
+   }
+
+   .projectCardImageWrap,
+   .projectCardInfo {
+      min-height: 0;
+   }
+
+   .projectCardImageWrap {
+      min-height: 0;
+   }
+
+   .projectCard:first-child .projectCardImageWrap {
+      aspect-ratio: 1.45 / 1;
+   }
+
+   .projectCardInfo {
+      padding: 1.35rem;
+   }
+
+   .footerSection {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1.35rem 1.25rem;
+   }
+
 }

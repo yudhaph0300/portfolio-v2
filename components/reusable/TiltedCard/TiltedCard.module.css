@@ -15,7 +15,7 @@
    transform-style: preserve-3d;
    background:
       radial-gradient(circle at 1px 1px, rgba(17, 24, 39, 0.12) 1px, transparent 1.5px) 0 0 / 20px 20px,
-      #cecece;
+      #e4e4e4;
    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
 }
 
