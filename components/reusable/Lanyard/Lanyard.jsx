@@ -164,7 +164,7 @@ function Band({ isMobile }) {
 
    return (
       <>
-         <group position={[-5, 7, 0]}>
+         <group position={[5, 7, 0]}>
             <RigidBody ref={fixed} type="fixed" colliders={false} />
             <RigidBody ref={jointOne} position={[0.5 * ROPE_SEGMENT_LENGTH, 0, 0]} colliders={false} angularDamping={4} linearDamping={4}>
                <BallCollider args={[0.1 * SIZE_RATIO]} />
