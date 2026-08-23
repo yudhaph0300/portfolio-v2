@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import PillNav from "../../reusable/PillNav/PillNav";
 import styles from "./ProjectsPage.module.css";
 
 const projects = [
    {
       number: "01",
+      slug: "koperasi-simpan-pinjam",
       title: "Koperasi Simpan Pinjam",
-      type: "Full Stack System",
+      type: "Personal Project",
       description: "A centralized workspace for managing members, savings, loans, and payments through a clear operational dashboard.",
       tags: ["Next.js", "Supabase", "Fullstack"],
       image: "/assets/projects/ksp-sf.jpg",
@@ -14,8 +16,9 @@ const projects = [
    },
    {
       number: "02",
+      slug: "arjuna",
       title: "Arjuna",
-      type: "Accreditation Platform",
+      type: "Freelance work at PT Planet",
       description: "A focused digital platform for submitting and managing scientific journal accreditation workflows.",
       tags: ["Next.js", "API Integration", "Frontend"],
       image: "/assets/projects/arjuna.jpg",
@@ -23,8 +26,9 @@ const projects = [
    },
    {
       number: "03",
+      slug: "rancamaya",
       title: "Rancamaya",
-      type: "Hospitality Website",
+      type: "Freelance work at PT Planet",
       description: "A refined hotel experience that brings rooms, dining, facilities, promotions, and guest experiences together.",
       tags: ["Next.js", "API Integration", "Frontend"],
       image: "/assets/projects/rancamaya.jpg",
@@ -34,7 +38,7 @@ const projects = [
 
 function ProjectCard({ project }) {
    return (
-      <article className={`${styles.projectCard} ${styles[project.accent]}`}>
+      <Link href={`/project/${project.slug}`} className={`${styles.projectCard} ${styles[project.accent]}`}>
          <div className={styles.imageWrap}>
             <Image
                src={project.image}
@@ -60,7 +64,7 @@ function ProjectCard({ project }) {
                </ul>
             </div>
          </div>
-      </article>
+      </Link>
    );
 }
 

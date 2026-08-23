@@ -43,7 +43,7 @@ function FeaturedProjectCard({ project, styles }) {
       <a
          ref={cardRef}
          className={`${styles.projectCard} ${styles[`projectCard${project.accent}`]}`}
-         href="/project"
+         href={`/project/${project.title.toLowerCase().replaceAll(" ", "-")}`}
       >
          <div className={styles.projectCardImageWrap}>
             <motion.div className={styles.projectCardImageParallax} style={{ y: imageY }}>
