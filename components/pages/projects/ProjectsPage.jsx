@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PillNav from "../../reusable/PillNav/PillNav";
+import ParallaxImage from "../../reusable/ParallaxImage/ParallaxImage";
 import styles from "./ProjectsPage.module.css";
 
 const projects = [
@@ -40,12 +41,12 @@ function ProjectCard({ project }) {
    return (
       <Link href={`/project/${project.slug}`} className={`${styles.projectCard} ${styles[project.accent]}`}>
          <div className={styles.imageWrap}>
-            <Image
+            <ParallaxImage
                src={project.image}
                alt={`${project.title} project preview`}
-               fill
                sizes="(max-width: 760px) 100vw, 50vw"
                className={styles.image}
+               imageClassName={styles.imageContent}
             />
          </div>
          <div className={styles.cardOverlay} />

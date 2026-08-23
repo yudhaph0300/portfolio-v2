@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ParallaxImage from "../../../components/reusable/ParallaxImage/ParallaxImage";
 import PillNav from "../../../components/reusable/PillNav/PillNav";
 import styles from "./page.module.css";
 
@@ -77,12 +77,12 @@ export default async function ProjectDetailPage({ params }) {
                <h1>{project.title}</h1>
             </div>
             <div className={styles.heroImage}>
-               <Image
+               <ParallaxImage
                   src={project.image}
                   alt={`${project.title} project preview`}
-                  fill
                   priority
                   sizes="(max-width: 760px) 100vw, 86vw"
+                  className={styles.parallaxImage}
                />
             </div>
          </section>
