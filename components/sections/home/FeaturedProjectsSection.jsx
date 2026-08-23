@@ -7,26 +7,26 @@ import { motion, useScroll, useTransform } from "motion/react";
 const projects = [
    {
       number: "01",
-      title: "Planet Indonesia",
-      description: "A focused digital experience shaped through Figma and front-end development.",
-      tags: ["Figma", "React", "UI Design"],
-      image: "/frames/city bg_020.jpg",
+      title: "Koperasi Simpan Pinjam",
+      description: "A web-based system for centrally managing members, savings, loans, and payments, featuring an informative dashboard.",
+      tags: ["NextJS", "Supabase", "Full Stack"],
+      image: "/assets/projects/ksp-sf.jpg",
       accent: "coral",
    },
    {
       number: "02",
-      title: "Illiyin Studio",
-      description: "A responsive interface built around clear data flows and reliable API integration.",
-      tags: ["React", "API", "JavaScript"],
-      image: "/frames/city bg_110.jpg",
+      title: "Arjuna",
+      description: "A digital platform for the submission and management of scientific journal accreditation.",
+      tags: ["NextJS", "API Integration", "Frontend"],
+      image: "/assets/projects/arjuna.jpg",
       accent: "lime",
    },
    {
       number: "03",
-      title: "Portfolio v2",
-      description: "An interactive portfolio exploring motion, 3D details, and scroll-driven storytelling.",
-      tags: ["Next.js", "GSAP", "WebGL"],
-      image: "/frames/city bg_220.jpg",
+      title: "Rancamaya",
+      description: "A hotel website showcasing rooms, facilities, dining options, promotions, and various guest experiences at R Hotel Rancamaya.",
+      tags: ["NextJS", "API Integration", "Frontend"],
+      image: "/assets/projects/rancamaya.jpg",
       accent: "blue",
    },
 ];
@@ -51,7 +51,7 @@ function FeaturedProjectCard({ project, styles }) {
                   src={project.image}
                   alt={`${project.title} project preview`}
                   fill
-                  sizes="(max-width: 700px) 100vw, 1180px"
+                  sizes="(max-width: 700px) 100vw, 1300px"
                   className={styles.projectCardImage}
                />
             </motion.div>

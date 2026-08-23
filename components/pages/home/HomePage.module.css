@@ -178,7 +178,7 @@
 
 .aboutGrid {
    position: relative;
-   width: min(1180px, 100%);
+   width: min(1300px, 100%);
    min-height: 90vh;
    display: flex;
    align-items: center;
@@ -189,7 +189,7 @@
    z-index: 2;
    inset: 0;
    width: 100vw;
-   transform: translateX(calc((min(1180px, 100vw) - 100vw) / 2));
+   transform: translateX(calc((min(1300px, 100vw) - 100vw) / 2));
 }
 
 .aboutContent {
@@ -283,7 +283,7 @@
 .experienceContent {
    position: relative;
    z-index: 1;
-   width: min(1180px, 100%);
+   width: min(1300px, 100%);
    margin: 0 auto;
    padding: 7rem 2rem;
 }
@@ -321,7 +321,7 @@
 }
 
 .featuredProjectsContent {
-   width: min(1180px, 100%);
+   width: min(1300px, 100%);
    margin: 0 auto;
    padding: 8rem 2rem 9rem;
 }
@@ -454,7 +454,7 @@
 .projectCardBody {
    display: grid;
    gap: 1rem;
-   max-width: 310px;
+   max-width: 400px;
 }
 
 .projectCardBody h3 {
