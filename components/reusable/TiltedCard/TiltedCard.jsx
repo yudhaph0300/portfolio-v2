@@ -7,7 +7,7 @@ import styles from './TiltedCard.module.css';
 
 const springValues = { damping: 30, stiffness: 100, mass: 2 };
 
-export default function TiltedCard({ logo, title, description, date }) {
+export default function TiltedCard({ logo, title, description, date, link }) {
    const ref = useRef(null);
    const x = useMotionValue(0);
    const y = useMotionValue(0);
@@ -35,18 +35,35 @@ export default function TiltedCard({ logo, title, description, date }) {
          onMouseEnter={() => { scale.set(1.04); opacity.set(1); }}
          onMouseLeave={() => { scale.set(1); opacity.set(0); rotateX.set(0); rotateY.set(0); }}
       >
-         <motion.div className={styles.inner} style={{ rotateX, rotateY, scale }}>
-            <div className={styles.cardContent}>
-               <div className={styles.cardHeader}>
-                  <Image src={logo} alt="" width={48} height={48} className={styles.logo} />
-                  <span className={styles.date}>{date}</span>
+         {link ? (
+            <a className={styles.link} href={link} target="_blank" rel="noreferrer">
+               <motion.div className={styles.inner} style={{ rotateX, rotateY, scale }}>
+                  <div className={styles.cardContent}>
+                     <div className={styles.cardHeader}>
+                        <Image src={logo} alt="" width={48} height={48} className={styles.logo} />
+                        <span className={styles.date}>{date}</span>
+                     </div>
+                     <div className={styles.cardBody}>
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                     </div>
+                  </div>
+               </motion.div>
+            </a>
+         ) : (
+            <motion.div className={styles.inner} style={{ rotateX, rotateY, scale }}>
+               <div className={styles.cardContent}>
+                  <div className={styles.cardHeader}>
+                     <Image src={logo} alt="" width={48} height={48} className={styles.logo} />
+                     <span className={styles.date}>{date}</span>
+                  </div>
+                  <div className={styles.cardBody}>
+                     <h3>{title}</h3>
+                     <p>{description}</p>
+                  </div>
                </div>
-               <div className={styles.cardBody}>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-               </div>
-            </div>
-         </motion.div>
+            </motion.div>
+         )}
          <motion.figcaption className={styles.caption} style={{ x, y, opacity }}>
             {title}
          </motion.figcaption>

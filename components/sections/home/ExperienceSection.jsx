@@ -7,12 +7,14 @@ const experiences = [
       title: "Freelance — PT Planet Indonesia Berkarya",
       description: "Handled Figma designs and front-end development.",
       date: "2025 – Present",
+      link: "https://planetindonesia.id/",
    },
    {
       logo: "/assets/logo/illiyin-logo.png",
       title: "Internship at Illiyin Studio",
       description: "Focused on API integration and data fetching using ReactJS.",
       date: "August 2023 – January 2024",
+      link: "https://illiyin.studio/",
    },
    {
       logo: "/assets/logo/alterra.png",
@@ -20,6 +22,7 @@ const experiences = [
       description:
          "Focused on learning Vue.js fundamentals and applying them through hands-on projects.",
       date: "February 2022 – July 2022",
+      link: "https://www.instagram.com/alterra.academy/",
    },
 ];
 
@@ -40,6 +43,7 @@ export default function ExperienceSection({ styles }) {
                      title={experience.title}
                      description={experience.description}
                      date={experience.date}
+                     link={experience.link}
                   />
                ))}
             </div>

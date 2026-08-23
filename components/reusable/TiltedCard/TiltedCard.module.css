@@ -19,6 +19,14 @@
    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
 }
 
+.link {
+   display: block;
+   width: 100%;
+   height: 100%;
+   color: inherit;
+   text-decoration: none;
+}
+
 .cardContent {
    position: relative;
    z-index: 1;
