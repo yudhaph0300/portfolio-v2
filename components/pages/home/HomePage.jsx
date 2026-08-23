@@ -7,6 +7,7 @@ import TechMarqueeSection from "../../sections/home/TechMarqueeSection";
 import ExperienceSection from "../../sections/home/ExperienceSection";
 import FeaturedProjectsSection from "../../sections/home/FeaturedProjectsSection";
 import FooterSection from "../../sections/home/FooterSection";
+import PillNav from "../../reusable/PillNav/PillNav";
 import styles from "./HomePage.module.css";
 import { useHomeSectionsSequence } from "../../../lib/hooks/home/useHomeSectionsSequence";
 
@@ -90,6 +91,7 @@ export default function HomePage() {
 
    return (
       <>
+         <PillNav />
          {!hideLoader && (
             <div
                className={`${styles.fullscreenLoader} ${shouldExitLoader ? styles.fullscreenLoaderExit : ""}`}

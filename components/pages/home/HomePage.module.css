@@ -178,7 +178,7 @@
 
 .aboutGrid {
    position: relative;
-   width: min(1300px, 100%);
+   width: min(1100px, 100%);
    min-height: 90vh;
    display: flex;
    align-items: center;
@@ -195,7 +195,7 @@
 .aboutContent {
    position: relative;
    z-index: 1;
-   width: 70%;
+   width: 80%;
    margin-right: auto;
    display: flex;
    flex-direction: column;
@@ -517,6 +517,21 @@
    font-weight: 700;
    letter-spacing: 0;
    transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.footerTalkButton {
+   width: auto;
+   height: auto;
+   gap: 0.45rem;
+   padding: 0.7rem 1rem;
+   border-radius: 999px;
+   font-size: 0.72rem;
+}
+
+.footerWhatsAppIcon {
+   width: 1rem;
+   height: 1rem;
+   fill: currentColor;
 }
 
 .footerContactButton:hover {
