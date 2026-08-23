@@ -9,7 +9,7 @@ const projects = [
       number: "01",
       title: "Koperasi Simpan Pinjam",
       description: "A web-based system for centrally managing members, savings, loans, and payments, featuring an informative dashboard.",
-      tags: ["NextJS", "Supabase", "Full Stack"],
+      tags: ["NextJS", "Supabase", "Fullstack"],
       image: "/assets/projects/ksp-sf.jpg",
       accent: "coral",
    },

@@ -1,11 +1,5 @@
-import PagePlaceholder from "../../components/reusable/PagePlaceholder";
+import ProjectsPage from "../../components/pages/projects/ProjectsPage";
 
 export default function ProjectPage() {
-   return (
-      <PagePlaceholder
-         eyebrow="Projects"
-         title="Projects"
-         description="This page is ready for selected projects and interactive case studies."
-      />
-   );
+   return <ProjectsPage />;
 }

@@ -1,0 +1,256 @@
+.page {
+   min-height: 100vh;
+   overflow: hidden;
+   background: #f1efe9;
+   color: #161616;
+}
+
+.intro,
+.projects,
+.footer {
+   width: min(1320px, 100%);
+   margin: 0 auto;
+   padding-inline: 2rem;
+}
+
+.intro {
+   padding-top: 8.5rem;
+   padding-bottom: 8rem;
+}
+
+.introTopline,
+.sectionHeading {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   color: #6c6a64;
+   font-size: 0.7rem;
+   font-weight: 700;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+}
+
+.introTopline {
+   padding-bottom: 1.1rem;
+   border-bottom: 1px solid rgba(22, 22, 22, 0.2);
+}
+
+.introBody {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) minmax(240px, 330px);
+   align-items: end;
+   gap: 3rem;
+   padding-top: 3rem;
+}
+
+.intro h1 {
+   margin: 0;
+   font-size: clamp(3rem, 6.5vw, 6.5rem);
+   line-height: 0.86;
+   letter-spacing: -0.06em;
+   font-weight: 700;
+}
+
+.introBody p {
+   max-width: 310px;
+   margin: 0 0 0.3rem;
+   color: #5c5b57;
+   font-size: 1rem;
+   line-height: 1.65;
+}
+
+.projects {
+   padding-bottom: 8rem;
+}
+
+.sectionHeading {
+   padding-bottom: 1.25rem;
+   border-bottom: 1px solid rgba(22, 22, 22, 0.2);
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 1rem;
+   padding-top: 1rem;
+}
+
+.projectCard {
+   position: relative;
+   min-height: 510px;
+   overflow: hidden;
+   isolation: isolate;
+}
+
+.projectCard:first-child {
+   grid-column: 1 / -1;
+   min-height: 620px;
+}
+
+.imageWrap,
+.cardOverlay {
+   position: absolute;
+   inset: 0;
+}
+
+.imageWrap {
+   z-index: -2;
+   background: #242424;
+}
+
+.image {
+   object-fit: cover;
+   transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.projectCard:hover .image {
+   transform: scale(1.06);
+}
+
+.cardOverlay {
+   z-index: -1;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.76));
+}
+
+.cardContent {
+   min-height: inherit;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 1.5rem;
+   color: #ffffff;
+}
+
+.cardTopline {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   font-size: 0.7rem;
+   font-weight: 700;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+}
+
+.cardType {
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.cardDetails {
+   max-width: 560px;
+}
+
+.cardDetails h2 {
+   margin: 0;
+   font-size: clamp(2.2rem, 4vw, 4.5rem);
+   line-height: 0.92;
+   letter-spacing: -0.05em;
+}
+
+.cardDetails p {
+   max-width: 440px;
+   margin: 1.2rem 0 1.5rem;
+   color: rgba(255, 255, 255, 0.78);
+   line-height: 1.55;
+}
+
+.tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.4rem;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.tags li {
+   padding: 0.5rem 0.65rem;
+   border: 1px solid rgba(255, 255, 255, 0.45);
+   font-size: 0.65rem;
+   font-weight: 700;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+}
+
+.coral {
+   background: #db6249;
+}
+
+.lime {
+   background: #b5c65d;
+}
+
+.blue {
+   background: #719dc2;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   padding-top: 1.5rem;
+   padding-bottom: 2rem;
+   border-top: 1px solid rgba(22, 22, 22, 0.2);
+   color: #6c6a64;
+   font-size: 0.75rem;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+
+.footer a {
+   color: #161616;
+   font-weight: 700;
+}
+
+.footer a span {
+   display: inline-block;
+   margin-left: 0.35rem;
+   font-size: 1rem;
+   transition: transform 180ms ease;
+}
+
+.footer a:hover span {
+   transform: translate(0.2rem, -0.2rem);
+}
+
+@media (max-width: 760px) {
+
+   .intro,
+   .projects,
+   .footer {
+      padding-inline: 1.25rem;
+   }
+
+   .intro {
+      padding-top: 6.5rem;
+      padding-bottom: 5rem;
+   }
+
+   .introBody {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-top: 2.5rem;
+   }
+
+   .intro h1 {
+      font-size: clamp(2.7rem, 12vw, 4.8rem);
+   }
+
+   .projects {
+      padding-bottom: 5rem;
+   }
+
+   .grid {
+      grid-template-columns: 1fr;
+   }
+
+   .projectCard:first-child {
+      grid-column: auto;
+      min-height: 510px;
+   }
+
+   .footer {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-bottom: 1.5rem;
+   }
+}
