@@ -86,7 +86,7 @@ export default function FeaturedProjectsSection({ styles }) {
                   <h2>Featured Projects</h2>
                </div>
                <p className={styles.featuredProjectsIntro}>
-                  A small collection of work where thoughtful design meets useful interaction.
+                  Selected works showcasing my approach to modern web development.
                </p>
             </div>
 
