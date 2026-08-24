@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PillNav from "../../reusable/PillNav/PillNav";
 import ParallaxImage from "../../reusable/ParallaxImage/ParallaxImage";
+import FooterSection from "../../reusable/FooterSection/FooterSection";
 import styles from "./ProjectsPage.module.css";
 
 const projects = [
@@ -79,7 +80,7 @@ export default function ProjectsPage() {
                <span>2022 — 2026</span>
             </div>
             <div className={styles.introBody}>
-               <h1>Turning Ideas <br />Into Functional & Engaging <br />Web Experiences</h1>
+               <h1>Turning <em>Ideas</em> <br />Into Functional & Engaging <br />Web Experiences</h1>
                <p>
                   A collection of digital products built with thoughtful interfaces, purposeful motion, and practical systems behind them.
                </p>
@@ -96,12 +97,7 @@ export default function ProjectsPage() {
                ))}
             </div>
          </section>
-         <footer className={styles.footer}>
-            <span>Have a project in mind?</span>
-            <a href="https://wa.me/6283833735915" target="_blank" rel="noreferrer">
-               Let&apos;s talk <span aria-hidden="true">↗</span>
-            </a>
-         </footer>
+         <FooterSection />
       </main>
    );
 }

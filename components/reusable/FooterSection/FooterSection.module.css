@@ -1,0 +1,58 @@
+.footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   padding: 1.5rem 2rem;
+   background: #111111;
+   color: rgba(255, 255, 255, 0.72);
+   font-size: 0.78rem;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+
+.footer p {
+   margin: 0;
+}
+
+.contactButtons {
+   display: flex;
+   align-items: center;
+   gap: 0.6rem;
+}
+
+.talkButton {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.45rem;
+   padding: 0.7rem 1rem;
+   border: 1px solid rgba(255, 255, 255, 0.42);
+   border-radius: 999px;
+   color: rgba(255, 255, 255, 0.78);
+   font-size: 0.72rem;
+   font-weight: 700;
+   letter-spacing: 0;
+   transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.whatsappIcon {
+   width: 1rem;
+   height: 1rem;
+   fill: currentColor;
+}
+
+.talkButton:hover,
+.talkButton:focus-visible {
+   border-color: #ffffff;
+   background: #ffffff;
+   color: #111111;
+}
+
+@media (max-width: 760px) {
+   .footer {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1.35rem 1.25rem;
+   }
+}

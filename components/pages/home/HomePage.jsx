@@ -6,7 +6,7 @@ import AboutSection from "../../sections/home/AboutSection";
 import TechMarqueeSection from "../../sections/home/TechMarqueeSection";
 import ExperienceSection from "../../sections/home/ExperienceSection";
 import FeaturedProjectsSection from "../../sections/home/FeaturedProjectsSection";
-import FooterSection from "../../sections/home/FooterSection";
+import FooterSection from "../../reusable/FooterSection/FooterSection";
 import PillNav from "../../reusable/PillNav/PillNav";
 import styles from "./HomePage.module.css";
 import { useHomeSectionsSequence } from "../../../lib/hooks/home/useHomeSectionsSequence";
@@ -135,7 +135,7 @@ export default function HomePage() {
          <TechMarqueeSection styles={styles} />
          <ExperienceSection styles={styles} />
          <FeaturedProjectsSection styles={styles} />
-         <FooterSection styles={styles} />
+         <FooterSection />
       </>
    );
 }

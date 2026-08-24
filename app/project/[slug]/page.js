@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FooterSection from "../../../components/reusable/FooterSection/FooterSection";
 import { notFound } from "next/navigation";
 import ParallaxImage from "../../../components/reusable/ParallaxImage/ParallaxImage";
 import PillNav from "../../../components/reusable/PillNav/PillNav";
@@ -115,12 +116,7 @@ export default async function ProjectDetailPage({ params }) {
                </div>
             </dl>
          </section>
-         <footer className={styles.footer}>
-            <span>Have a project in mind?</span>
-            <a href="https://wa.me/6283833735915" target="_blank" rel="noreferrer">
-               Let&apos;s talk <span aria-hidden="true">↗</span>
-            </a>
-         </footer>
+         <FooterSection />
       </main>
    );
 }

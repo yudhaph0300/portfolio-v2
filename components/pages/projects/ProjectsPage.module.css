@@ -51,6 +51,12 @@
    font-weight: 700;
 }
 
+.intro h1 em {
+   color: #035db9;
+   font-family: Georgia, "Times New Roman", serif;
+   font-weight: 400;
+}
+
 .introBody p {
    max-width: 310px;
    margin: 0 0 0.3rem;

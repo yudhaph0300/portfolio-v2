@@ -217,6 +217,12 @@
 
 }
 
+.aboutContent h2 em {
+   color: #035db9;
+   font-family: Georgia, "Times New Roman", serif;
+   font-weight: 400;
+}
+
 .aboutContent p {
    font-size: 1rem;
    line-height: 1.85;
