@@ -601,6 +601,52 @@
    max-width: 680px;
 }
 
+@media (max-width: 1024px) {
+   .aboutSection {
+      min-height: 80vh;
+      margin-top: -80vh;
+      padding: 0 1.5rem;
+   }
+
+   .aboutGrid {
+      min-height: 80vh;
+   }
+
+   .aboutContent {
+      width: 72%;
+   }
+
+   .aboutContent h2 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+   }
+
+   .experienceContent {
+      padding: 5rem 1.5rem;
+   }
+
+   .experienceCards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+   }
+
+   .experienceCards > :last-child {
+      grid-column: 1 / -1;
+   }
+
+   .featuredProjectsContent {
+      padding: 6rem 1.5rem 7rem;
+   }
+
+   .featuredProjectsHeading h2 {
+      white-space: normal;
+   }
+
+   .projectCardInfo {
+      min-height: 540px;
+      padding: 1.5rem;
+   }
+}
+
 @media (max-width: 700px) {
    .heroSection {
       height: 560vh;
@@ -611,7 +657,8 @@
    }
 
    .primaryHeadline {
-      font-size: clamp(2.2rem, 10vw, 3.3rem);
+      max-width: 94vw;
+      font-size: clamp(2rem, 10vw, 3.3rem);
    }
 
    .secondaryHeadline {
@@ -620,12 +667,13 @@
    }
 
    .aboutSection {
-      min-height: 90vh;
+      min-height: 100vh;
+      margin-top: -100vh;
       padding: 0 1.25rem;
    }
 
    .aboutGrid {
-      min-height: 0;
+      min-height: 100vh;
    }
 
    .aboutLanyard {
@@ -644,6 +692,7 @@
 
    .aboutContent p {
       font-size: 1rem;
+      line-height: 1.7;
    }
 
    .comingSoonSection {
@@ -657,16 +706,21 @@
    }
 
    .marqueeSet {
-      gap: 2.5rem;
-      padding: 0 2.5rem;
+      gap: 2rem;
+      padding: 0 2rem;
    }
 
    .experienceContent {
-      padding: 4rem 1.25rem;
+      padding: 4rem 1.25rem 5rem;
    }
 
    .experienceCards {
       grid-template-columns: 1fr;
+      gap: 1rem;
+   }
+
+   .experienceCards > :last-child {
+      grid-column: auto;
    }
 
    .featuredProjectsContent {
@@ -683,6 +737,7 @@
 
    .featuredProjectsHeading h2 {
       font-size: clamp(1.8rem, 7vw, 2.8rem);
+      white-space: normal;
    }
 
    .featuredProjectsIntro {
@@ -699,19 +754,44 @@
 
    .projectCard {
       grid-template-columns: 1fr;
-   }
-
-   .projectCardImageWrap,
-   .projectCardInfo {
-      min-height: 0;
+      display: flex;
+      flex-direction: column;
    }
 
    .projectCardImageWrap {
-      min-height: 0;
+      position: relative;
+      inset: auto;
+      height: 220px;
+      flex: 0 0 220px;
+   }
+
+   .projectCardImageParallax {
+      inset: -12% 0;
+      height: 124%;
+   }
+
+   .projectCardInfo {
+      min-height: 320px;
+      flex: 1;
+      background: inherit;
+      color: #151515;
+   }
+
+   .projectCardTopline {
+      color: rgba(21, 21, 21, 0.72);
+   }
+
+   .projectCardTags span {
+      border-color: rgba(21, 21, 21, 0.45);
    }
 
    .projectCard:first-child .projectCardImageWrap {
-      aspect-ratio: 1.45 / 1;
+      aspect-ratio: auto;
+   }
+
+   .projectCardInfo,
+   .projectCardImageWrap {
+      min-height: 0;
    }
 
    .projectCardInfo {
