@@ -1,9 +1,11 @@
 import styles from "./FooterSection.module.css";
 
+const currentYear = new Date().getFullYear();
+
 export default function FooterSection({ className = "" }) {
    return (
       <footer className={`${styles.footer} ${className}`}>
-         <p>© 2026 Yudha Pamungkas</p>
+         <p>© {currentYear} M Yudha Pamungkas</p>
          <div className={styles.contactButtons} aria-label="Contact links">
             <a
                className={styles.talkButton}
