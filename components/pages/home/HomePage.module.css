@@ -677,8 +677,7 @@
    }
 
    .aboutLanyard {
-      order: 2;
-      transform: none;
+      display: none;
    }
 
    .aboutContent {
