@@ -1,4 +1,3 @@
-import Aurora from "../../reusable/Aurora/Aurora";
 import TiltedCard from "../../reusable/TiltedCard/TiltedCard";
 
 const experiences = [
@@ -29,7 +28,6 @@ const experiences = [
 export default function ExperienceSection({ styles }) {
    return (
       <section className={styles.experienceSection}>
-         <Aurora colorStops={["#080d1c", "#122653", "#32194f"]} amplitude={0.75} blend={0.42} speed={0.7} />
          <div className={styles.experienceContent}>
             <div className={styles.experienceHeading}>
                <p className={styles.experienceEyebrow}>Experience</p>

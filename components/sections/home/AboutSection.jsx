@@ -1,24 +1,19 @@
 import Lanyard from "../../reusable/Lanyard/Lanyard";
 
 export default function AboutSection({
-   aboutSectionTransform,
-   aboutReveal,
-   aboutContentOpacity,
-   aboutContentTransform,
    styles,
 }) {
    return (
       <section
          id="about"
          className={styles.aboutSection}
-         style={{ transform: aboutSectionTransform, opacity: Math.max(aboutReveal, 0.001) }}
       >
          <div className={styles.aboutGrid}>
             <div className={styles.aboutLanyard} aria-hidden="true">
                <Lanyard />
             </div>
 
-            <div className={styles.aboutContent} style={{ opacity: aboutContentOpacity, transform: aboutContentTransform }}>
+            <div className={styles.aboutContent}>
                <p className={styles.aboutEyebrow}>About</p>
                <h2>I Build Ideas Into Digital Experiences.</h2>
                <p>
