@@ -78,6 +78,38 @@
    animation: reveal 700ms 120ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+.contactLinks {
+   width: min(100%, 720px);
+   display: flex;
+   gap: 2rem;
+   margin: -2.5rem 0 5rem;
+   animation: reveal 700ms 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.contactLinks a {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.45rem;
+   color: #5c5b57;
+   font-size: 0.72rem;
+   font-weight: 700;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   transition: color 180ms ease;
+}
+
+.contactIcon {
+   width: 1rem;
+   height: 1rem;
+   flex: 0 0 auto;
+   fill: currentColor;
+}
+
+.contactLinks a:hover,
+.contactLinks a:focus-visible {
+   color: #035db9;
+}
+
 .action {
    min-height: 132px;
    display: flex;
@@ -190,6 +222,10 @@
 
    .actions {
       grid-template-columns: 1fr;
+   }
+
+   .contactLinks {
+      margin-top: -2.5rem;
    }
 
    .action {
