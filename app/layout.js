@@ -8,8 +8,8 @@ const archivo = Archivo({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Immersive portfolio experience",
+  title: "M Yudha Pamungkas",
+  description: "I’m a Front-end Web Developer focused on building modern, responsive, and functional web experiences with React and Next.js. I enjoy turning ideas and designs into clean, intuitive interfaces while continuously improving my skills and exploring better ways to build for the web.",
 };
 
 export default function RootLayout({ children }) {
