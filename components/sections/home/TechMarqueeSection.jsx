@@ -1,11 +1,24 @@
 import Image from "next/image";
 
 const technologies = [
-   { name: "Next.js", icon: "/icon/next-js.png" },
-   { name: "Supabase", icon: "/icon/supabase.png" },
-   { name: "GitHub", icon: "/icon/github.png" },
-   { name: "Figma", icon: "/icon/figma.png" },
-   { name: "Bootstrap", icon: "/icon/bootstrap.png" },
+   { name: "NextJS", icon: "/icon/nextjs.svg" },
+   { name: "ReactJS", icon: "/icon/react.svg" },
+   { name: "JavaScript", icon: "/icon/javascript.svg" },
+   { name: "Bootstrap", icon: "/icon/bootstrap.svg" },
+   { name: "Swiper", icon: "/icon/swiper.svg" },
+   { name: "React Bits", icon: "/icon/reactbits.svg" },
+   { name: "Node.js", icon: "/icon/nodejs.svg" },
+   { name: "Supabase", icon: "/icon/supabase.svg" },
+   { name: "Vercel", icon: "/icon/vercel.svg" },
+   { name: "GitHub", icon: "/icon/github.svg" },
+   { name: "TypeScript", icon: "/icon/typescript.svg" },
+   { name: "Tailwind CSS", icon: "/icon/tailwindcss.svg" },
+   { name: "Framer Motion", icon: "/icon/framer.svg" },
+   { name: "GSAP", icon: "/icon/gsap.svg" },
+   { name: "Three.js", icon: "/icon/threedotjs.svg" },
+   { name: "PostgreSQL", icon: "/icon/postgresql.svg" },
+   { name: "Prisma", icon: "/icon/prisma.svg" },
+   { name: "Git", icon: "/icon/git.svg" },
 ];
 
 function TechnologySet({ styles }) {
