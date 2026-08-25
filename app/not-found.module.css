@@ -1,0 +1,98 @@
+.page {
+   min-height: 100vh;
+   background: #f1efe9;
+   color: #161616;
+}
+
+.content {
+   width: min(1320px, 100%);
+   min-height: 100vh;
+   margin: 0 auto;
+   padding: 8.5rem 2rem 2rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.topline {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   padding-bottom: 1.1rem;
+   border-bottom: 1px solid rgba(22, 22, 22, 0.2);
+   color: #6c6a64;
+   font-size: 0.7rem;
+   font-weight: 700;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+}
+
+.message {
+   width: min(760px, 100%);
+   margin: auto 0;
+   padding: 5rem 0;
+}
+
+.code {
+   margin-bottom: 1rem;
+   color: #035db9;
+   font-size: clamp(1rem, 1.5vw, 1.3rem);
+   font-weight: 700;
+   letter-spacing: 0.14em;
+}
+
+.message h1 {
+   max-width: 700px;
+   margin: 0;
+   font-size: clamp(3.3rem, 7vw, 7rem);
+   line-height: 0.88;
+   letter-spacing: -0.06em;
+}
+
+.description {
+   max-width: 390px;
+   margin: 2rem 0 2.5rem;
+   color: #5c5b57;
+   font-size: 1rem;
+   line-height: 1.65;
+}
+
+.homeLink {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.65rem;
+   padding: 0.85rem 1.1rem;
+   border: 1px solid #161616;
+   color: #161616;
+   font-size: 0.75rem;
+   font-weight: 700;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.homeLink span {
+   font-size: 1.1rem;
+   line-height: 1;
+}
+
+.homeLink:hover,
+.homeLink:focus-visible {
+   background: #035db9;
+   border-color: #035db9;
+   color: #ffffff;
+   transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+   .content {
+      padding: 6rem 1.25rem 1.5rem;
+   }
+
+   .message {
+      padding: 3rem 0;
+   }
+
+   .message h1 {
+      font-size: clamp(3rem, 15vw, 5.2rem);
+   }
+}

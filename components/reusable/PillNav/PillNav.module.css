@@ -19,6 +19,7 @@
 }
 
 .pill {
+   position: relative;
    display: inline-flex;
    align-items: center;
    justify-content: center;
@@ -27,6 +28,32 @@
    border-radius: 999px;
    color: rgba(255, 255, 255, 0.72);
    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.tooltip {
+   position: absolute;
+   right: calc(100% + 0.65rem);
+   top: 50%;
+   padding: 0.45rem 0.65rem;
+   border-radius: 0.35rem;
+   background: #ffffff;
+   color: #111111;
+   font-size: 0.68rem;
+   font-weight: 700;
+   letter-spacing: 0.08em;
+   line-height: 1;
+   text-transform: uppercase;
+   white-space: nowrap;
+   pointer-events: none;
+   opacity: 0;
+   transform: translate(0.35rem, -50%);
+   transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.pill:hover .tooltip,
+.pill:focus-visible .tooltip {
+   opacity: 1;
+   transform: translate(0, -50%);
 }
 
 .icon {

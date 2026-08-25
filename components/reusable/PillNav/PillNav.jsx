@@ -41,6 +41,9 @@ export default function PillNav({ items = defaultItems, activeHref = "/" }) {
                   <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true">
                      <NavIcon name={item.icon} />
                   </svg>
+                  <span className={styles.tooltip} aria-hidden="true">
+                     {item.label}
+                  </span>
                </a>
             ))}
          </nav>

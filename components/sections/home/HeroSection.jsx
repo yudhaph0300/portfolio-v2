@@ -64,10 +64,14 @@ export default function HeroSection({
 
       return () => {
          window.clearTimeout(timer);
-         xTo.current?.kill();
-         yTo.current?.kill();
-         rotationTo.current?.kill();
-         scaleTo.current?.kill();
+         xTo.current?.tween.kill();
+         yTo.current?.tween.kill();
+         rotationTo.current?.tween.kill();
+         scaleTo.current?.tween.kill();
+         xTo.current = null;
+         yTo.current = null;
+         rotationTo.current = null;
+         scaleTo.current = null;
       };
    }, []);
 
