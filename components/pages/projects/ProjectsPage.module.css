@@ -6,8 +6,7 @@
 }
 
 .intro,
-.projects,
-.footer {
+.projects {
    width: min(1320px, 100%);
    margin: 0 auto;
    padding-inline: 2rem;
@@ -195,40 +194,10 @@
    background: #719dc2;
 }
 
-.footer {
-   display: flex;
-   justify-content: space-between;
-   gap: 1rem;
-   padding-top: 1.5rem;
-   padding-bottom: 2rem;
-   border-top: 1px solid rgba(22, 22, 22, 0.2);
-   color: #6c6a64;
-   font-size: 0.75rem;
-   letter-spacing: 0.08em;
-   text-transform: uppercase;
-}
-
-.footer a {
-   color: #161616;
-   font-weight: 700;
-}
-
-.footer a span {
-   display: inline-block;
-   margin-left: 0.35rem;
-   font-size: 1rem;
-   transition: transform 180ms ease;
-}
-
-.footer a:hover span {
-   transform: translate(0.2rem, -0.2rem);
-}
-
 @media (max-width: 760px) {
 
    .intro,
-   .projects,
-   .footer {
+   .projects {
       padding-inline: 1.25rem;
    }
 

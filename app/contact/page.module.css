@@ -162,31 +162,6 @@
    line-height: 1;
 }
 
-.footer {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 1rem;
-   padding-top: 1.25rem;
-   border-top: 1px solid rgba(22, 22, 22, 0.2);
-   color: #6c6a64;
-   font-size: 0.72rem;
-   letter-spacing: 0.08em;
-   text-transform: uppercase;
-   animation: reveal 700ms 240ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-.footer a {
-   color: #161616;
-   font-weight: 700;
-   transition: color 180ms ease;
-}
-
-.footer a:hover,
-.footer a:focus-visible {
-   color: #035db9;
-}
-
 @keyframes reveal {
    from {
       opacity: 0;

@@ -6,8 +6,7 @@
 }
 
 .hero,
-.info,
-.footer {
+.info {
    width: min(1320px, 100%);
    margin: 0 auto;
    padding-inline: 2rem;
@@ -188,37 +187,10 @@
    letter-spacing: 0.04em;
 }
 
-.footer {
-   display: flex;
-   justify-content: space-between;
-   gap: 1rem;
-   padding-top: 1.5rem;
-   padding-bottom: 2rem;
-   border-top: 1px solid rgba(22, 22, 22, 0.2);
-   color: #686762;
-}
-
-.footer a {
-   color: #161616;
-   font-weight: 700;
-}
-
-.footer a span {
-   display: inline-block;
-   margin-left: 0.35rem;
-   font-size: 1rem;
-   transition: transform 180ms ease;
-}
-
-.footer a:hover span {
-   transform: translate(0.2rem, -0.2rem);
-}
-
 @media (max-width: 760px) {
 
    .hero,
-   .info,
-   .footer {
+   .info {
       padding-inline: 1.25rem;
    }
 
