@@ -7,7 +7,7 @@ import styles from './TiltedCard.module.css';
 
 const springValues = { damping: 30, stiffness: 100, mass: 2 };
 
-export default function TiltedCard({ logo, title, description, date, link }) {
+export default function TiltedCard({ number, logo, title, description, date, link }) {
    const ref = useRef(null);
    const x = useMotionValue(0);
    const y = useMotionValue(0);
@@ -40,6 +40,7 @@ export default function TiltedCard({ logo, title, description, date, link }) {
                <motion.div className={styles.inner} style={{ rotateX, rotateY, scale }}>
                   <div className={styles.cardContent}>
                      <div className={styles.cardHeader}>
+                        <span className={styles.number}>{number}</span>
                         <Image src={logo} alt="" width={48} height={48} className={styles.logo} />
                         <span className={styles.date}>{date}</span>
                      </div>
@@ -54,6 +55,7 @@ export default function TiltedCard({ logo, title, description, date, link }) {
             <motion.div className={styles.inner} style={{ rotateX, rotateY, scale }}>
                <div className={styles.cardContent}>
                   <div className={styles.cardHeader}>
+                     <span className={styles.number}>{number}</span>
                      <Image src={logo} alt="" width={48} height={48} className={styles.logo} />
                      <span className={styles.date}>{date}</span>
                   </div>

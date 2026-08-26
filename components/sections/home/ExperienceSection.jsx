@@ -27,16 +27,22 @@ const experiences = [
 
 export default function ExperienceSection({ styles }) {
    return (
-      <section className={styles.experienceSection}>
+      <section id="experience" className={styles.experienceSection}>
          <div className={styles.experienceContent}>
             <div className={styles.experienceHeading}>
-               <p className={styles.experienceEyebrow}>Experience</p>
-               {/* <h2>Experience That Shaped Me.</h2> */}
+               <div>
+                  <p className={styles.experienceEyebrow}>Experience</p>
+                  <h2>Places That Shaped My Practice.</h2>
+               </div>
+               <p className={styles.experienceIntro}>
+                  A short record of the teams, products, and projects that have shaped how I build for the web.
+               </p>
             </div>
             <div className={styles.experienceCards}>
-               {experiences.map((experience) => (
+               {experiences.map((experience, index) => (
                   <TiltedCard
                      key={experience.title}
+                     number={`0${index + 1}`}
                      logo={experience.logo}
                      title={experience.title}
                      description={experience.description}
