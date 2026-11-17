@@ -9,7 +9,7 @@ export default function FooterSection({ className = "" }) {
          <div className={styles.contactButtons} aria-label="Contact links">
             <a
                className={styles.talkButton}
-               href="https://wa.me/6283833735915"
+               href="https://wa.me/6282323319551"
                target="_blank"
                rel="noreferrer"
                aria-label="Start a conversation on WhatsApp"
